@@ -1,0 +1,14 @@
+# ignore some source pollution from the developer's machine
+/crap/
+/src-arch/
+
+# ignore any folder called "graveyard"
+graveyard/
+
+# ignore Visual Studio output files and pollution - but not the important project files
+/Alienhack/*
+!Alienhack.sln
+!Alienhack/Alienhack
+/Alienhack/Alienhack/*
+!Alienhack.vcproj
+!Alienhack.vcxproj

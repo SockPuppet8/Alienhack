@@ -1,0 +1,3 @@
+Source code in the AlienHack repository is CC0 (Public Domain).
+
+It is supplied without an implied warranty of any kind.

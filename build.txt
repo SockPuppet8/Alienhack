@@ -1,0 +1,40 @@
+How to build AlienHack
+
+
+1. Install your dev environment
+
+I am using Visual Studio 2017 Community Edition to build the game right now. Project files for this IDE are provided.
+If you choose the same IDE, beware when installing - you are recommended to use the "individual items" menu rather than the "workloads" menu, since the latter doesn't work very well and can install the IDE in a state in which it can't compile or build anything! 
+Make sure that you install one of the Windows SDKs from that menu. The Windows 10 SDK which is selected by default should work fine (even for lower versions of Windows). 
+
+If you choose a different IDE, you'll need to set up a makefile or project yourself.
+
+
+2. Get Boost
+
+Download the boost_1_67_0 archive from www.boost.org. 
+Unzip it in a location of your preference. 
+Dig down a couple of folder levels until you find "bootstrap.bat". 
+Open a command prompt there and run the bootstrap batch file. 
+AlienHack needs static libs which are probably not built by default, so run "b2 --build-type=complete". BEWARE: this can take more than an hour. 
+(If you want to help the project by figuring out exactly which of the variant libraries that AlienHack requires and what command line is required to build only those libraries, please be my guest!)
+
+
+3. Get the AlienHack source code
+
+You need the "AlienHack" repository and the "Shared" repository (TODO: link).
+Choose your development folder wherever you like and put those two repositories under that folder.
+The structure from your development folder should now match that given in "folders.txt".
+
+
+4. Set environment variables: 
+
+RLDEV_SHARED_PATH to point to the location of the folder "Shared"
+RLDEV_BOOST_PATH to point to the location of the "boost" folder in the Boost folder tree
+RLDEV_BOOST_LIB_PATH to point to the location of the Boost .lib files (probably Stage/lib under the Boost root folder)
+
+
+5. If you're using Visual Studio, open "Alienhack.sln" in the IDE. Cross your fingers and build. 
+
+
+6. After a successful build, copy "ah_readme.txt" and "keys.txt" into the same folder as the executable if they aren't already there or have changed. 

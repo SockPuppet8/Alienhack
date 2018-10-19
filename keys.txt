@@ -1,0 +1,43 @@
+
+OK			Enter
+Back			Esc
+Up			Up
+UpAndLeft		UpAndLeft
+Left			Left
+DownAndLeft		DownAndLeft
+Down			Down
+DownAndRight	DownAndRight
+Right			Right
+UpAndRight		UpAndRight
+ScrollUp		-
+ScrollDown		+
+ScrollDown		=
+
+Help			?
+Look			l
+Save			S
+Char			c
+Buy			$
+
+Wait			.
+FloorUp		>
+FloorDown		<
+Strafe		z
+StrafeLock		Z
+Turn			x
+TurnLock		X
+Get			g
+Operate		Space
+Armour		a
+Sidearm		s
+Primary		p
+Reload		o
+Drop			d
+Fire			f
+Frag			r
+Stun			t
+Inc			i
+Krak			k
+Medkit		m
+Neutraliser		n
+Demolition		e

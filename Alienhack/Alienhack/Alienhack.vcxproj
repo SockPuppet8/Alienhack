@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{62F34D4F-ADDB-4774-9A85-0FB5904BC1DD}</ProjectGuid>
+    <RootNamespace>Alienhack</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <IncludePath>$(RLDEV_BOOST_PATH);$(RLDEV_SHARED_PATH);$(RLDEV_SHARED_PATH)/Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(RLDEV_BOOST_LIB_PATH);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <IncludePath>$(RLDEV_BOOST_PATH);$(RLDEV_SHARED_PATH);$(RLDEV_SHARED_PATH)/Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(RLDEV_BOOST_LIB_PATH);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Shared\ActionEngine\ActionEngine.cpp" />
+    <ClCompile Include="..\..\..\Shared\Algorithm\Algorithms-2D.cpp" />
+    <ClCompile Include="..\..\..\Shared\ConsoleView\ConsoleView.cpp" />
+    <ClCompile Include="..\..\..\Shared\ConsoleView\KeyMap.cpp" />
+    <ClCompile Include="..\..\..\Shared\Console\Console.cpp" />
+    <ClCompile Include="..\..\..\Shared\Game\GameModel.cpp" />
+    <ClCompile Include="..\..\..\Shared\Game\GameObject.cpp" />
+    <ClCompile Include="..\..\..\Shared\Interface\InterfaceState.cpp" />
+    <ClCompile Include="..\..\..\Shared\Interface\InterfaceStateMachine.cpp" />
+    <ClCompile Include="..\..\..\Shared\Messages\Console\MessageDisplay.cpp" />
+    <ClCompile Include="..\..\..\Shared\Messages\UserMessageLog.cpp" />
+    <ClCompile Include="..\..\..\Shared\World-2DTiles\BSPMapGeneration\BSPMapMake.cpp" />
+    <ClCompile Include="..\..\..\Shared\World-2DTiles\BSPMapGeneration\BSPMapMakeWrapper.cpp" />
+    <ClCompile Include="..\..\..\Shared\World-2DTiles\HearingField.cpp" />
+    <ClCompile Include="..\..\..\Shared\World-2DTiles\permissive-fov\permissive-fov.cc" />
+    <ClCompile Include="..\..\..\Shared\World-2DTiles\VisionField.cpp" />
+    <ClCompile Include="..\..\..\Shared\World-2DTiles\World.cpp" />
+    <ClCompile Include="..\..\..\Shared\World-2DTiles\Zone.cpp" />
+    <ClCompile Include="..\..\..\Shared\WorldObjects\Actor.cpp" />
+    <ClCompile Include="..\..\..\Shared\WorldObjects\WorldObject.cpp" />
+    <ClCompile Include="..\..\src\Console\Interface\BuyPerks.cpp" />
+    <ClCompile Include="..\..\src\Console\Interface\CharScreen.cpp" />
+    <ClCompile Include="..\..\src\Console\Interface\ChoiceDialog.cpp" />
+    <ClCompile Include="..\..\src\Console\Interface\draw.cpp" />
+    <ClCompile Include="..\..\src\Console\Interface\DropDialog.cpp" />
+    <ClCompile Include="..\..\src\Console\Interface\GameEvents.cpp" />
+    <ClCompile Include="..\..\src\Console\Interface\GameTypeMenu.cpp" />
+    <ClCompile Include="..\..\src\Console\Interface\GetDialog.cpp" />
+    <ClCompile Include="..\..\src\Console\Interface\GetWeaponDialog.cpp" />
+    <ClCompile Include="..\..\src\Console\Interface\HelpScreen.cpp" />
+    <ClCompile Include="..\..\src\Console\Interface\Kaboom.cpp" />
+    <ClCompile Include="..\..\src\Console\Interface\LoadOrNew.cpp" />
+    <ClCompile Include="..\..\src\Console\Interface\LookMode.cpp" />
+    <ClCompile Include="..\..\src\Console\Interface\MessageBox.cpp" />
+    <ClCompile Include="..\..\src\Console\Interface\NameEntry.cpp" />
+    <ClCompile Include="..\..\src\Console\Interface\PlayingGame.cpp" />
+    <ClCompile Include="..\..\src\Console\Interface\story.cpp" />
+    <ClCompile Include="..\..\src\Console\Interface\StoryText.cpp" />
+    <ClCompile Include="..\..\src\Console\Interface\TargetSelect.cpp" />
+    <ClCompile Include="..\..\src\Console\Interface\Title.cpp" />
+    <ClCompile Include="..\..\src\Console\Interface\ViewFile.cpp" />
+    <ClCompile Include="..\..\src\Console\main.cpp" />
+    <ClCompile Include="..\..\src\Model\Actions\BreakDoorAction.cpp" />
+    <ClCompile Include="..\..\src\Model\Actions\CloseDoorAction.cpp" />
+    <ClCompile Include="..\..\src\Model\Actions\DirectAttackAction.cpp" />
+    <ClCompile Include="..\..\src\Model\Actions\DiscreteMoveAction.cpp" />
+    <ClCompile Include="..\..\src\Model\Actions\DiscreteTurnAction.cpp" />
+    <ClCompile Include="..\..\src\Model\Actions\DropArmourAction.cpp" />
+    <ClCompile Include="..\..\src\Model\Actions\DropItemAction.cpp" />
+    <ClCompile Include="..\..\src\Model\Actions\DropWeaponAction.cpp" />
+    <ClCompile Include="..\..\src\Model\Actions\EnterExitVentAction.cpp" />
+    <ClCompile Include="..\..\src\Model\Actions\HasCompletionCallback.cpp" />
+    <ClCompile Include="..\..\src\Model\Actions\HuggerAttackAction.cpp" />
+    <ClCompile Include="..\..\src\Model\Actions\OpenDoorAction.cpp" />
+    <ClCompile Include="..\..\src\Model\Actions\PickupAction.cpp" />
+    <ClCompile Include="..\..\src\Model\Actions\PickupArmourAction.cpp" />
+    <ClCompile Include="..\..\src\Model\Actions\PickupWeaponAction.cpp" />
+    <ClCompile Include="..\..\src\Model\Actions\ReloadWeaponAction.cpp" />
+    <ClCompile Include="..\..\src\Model\Actions\SetChargeAction.cpp" />
+    <ClCompile Include="..\..\src\Model\Actions\SpitterAttackAction.cpp" />
+    <ClCompile Include="..\..\src\Model\Actions\SwitchWeaponAction.cpp" />
+    <ClCompile Include="..\..\src\Model\Actions\TakeAmmoAction.cpp" />
+    <ClCompile Include="..\..\src\Model\Actions\ThrowGrenadeAction.cpp" />
+    <ClCompile Include="..\..\src\Model\Actions\UseItemAction.cpp" />
+    <ClCompile Include="..\..\src\Model\Actions\UseTerminalAction.cpp" />
+    <ClCompile Include="..\..\src\Model\Actions\WaitAction.cpp" />
+    <ClCompile Include="..\..\src\Model\Actions\WeaponAttackAction.cpp" />
+    <ClCompile Include="..\..\src\Model\AHGameModel.cpp" />
+    <ClCompile Include="..\..\src\Model\FindNearest.cpp" />
+    <ClCompile Include="..\..\src\Model\LoSSampler.cpp" />
+    <ClCompile Include="..\..\src\Model\MapCreator.cpp" />
+    <ClCompile Include="..\..\src\Model\Objects\AcidSplashable.cpp" />
+    <ClCompile Include="..\..\src\Model\Objects\AHGameObject.cpp" />
+    <ClCompile Include="..\..\src\Model\Objects\Alien.cpp" />
+    <ClCompile Include="..\..\src\Model\Objects\Armour.cpp" />
+    <ClCompile Include="..\..\src\Model\Objects\Barrel.cpp" />
+    <ClCompile Include="..\..\src\Model\Objects\Decoration.cpp" />
+    <ClCompile Include="..\..\src\Model\Objects\Egg.cpp" />
+    <ClCompile Include="..\..\src\Model\Objects\Explosion.cpp" />
+    <ClCompile Include="..\..\src\Model\Objects\Explosive.cpp" />
+    <ClCompile Include="..\..\src\Model\Objects\Fire.cpp" />
+    <ClCompile Include="..\..\src\Model\Objects\Furniture.cpp" />
+    <ClCompile Include="..\..\src\Model\Objects\LaserTrail.cpp" />
+    <ClCompile Include="..\..\src\Model\Objects\Pickup.cpp" />
+    <ClCompile Include="..\..\src\Model\Objects\Ping.cpp" />
+    <ClCompile Include="..\..\src\Model\Objects\PlayerCharacter.cpp" />
+    <ClCompile Include="..\..\src\Model\Objects\PlayerStats.cpp" />
+    <ClCompile Include="..\..\src\Model\Objects\Projectile.cpp" />
+    <ClCompile Include="..\..\src\Model\Objects\Terminal.cpp" />
+    <ClCompile Include="..\..\src\Model\Objects\Weapon.cpp" />
+    <ClCompile Include="..\..\src\Model\Objects\WeaponData.cpp" />
+    <ClCompile Include="..\..\src\Model\OverWorld.cpp" />
+    <ClCompile Include="..\..\src\Model\save.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Shared\Abstract\AGameModel.hpp" />
+    <ClInclude Include="..\..\..\Shared\Abstract\AOutputWindow.hpp" />
+    <ClInclude Include="..\..\..\Shared\Abstract\AUserInputItem.hpp" />
+    <ClInclude Include="..\..\..\Shared\Abstract\IGameModel.hpp" />
+    <ClInclude Include="..\..\..\Shared\ActionEngine\ActionEngine.hpp" />
+    <ClInclude Include="..\..\..\Shared\Algorithm\Algorithms-2D.hpp" />
+    <ClInclude Include="..\..\..\Shared\ConsoleView\ConsoleView.hpp" />
+    <ClInclude Include="..\..\..\Shared\ConsoleView\KeyMap.hpp" />
+    <ClInclude Include="..\..\..\Shared\ConsoleView\KeyPress.hpp" />
+    <ClInclude Include="..\..\..\Shared\Console\Console.hpp" />
+    <ClInclude Include="..\..\..\Shared\DBKeyValue.hpp" />
+    <ClInclude Include="..\..\..\Shared\Game\FastAction.hpp" />
+    <ClInclude Include="..\..\..\Shared\Game\GameModel.hpp" />
+    <ClInclude Include="..\..\..\Shared\Game\GameObject.hpp" />
+    <ClInclude Include="..\..\..\Shared\Include\assert.hpp" />
+    <ClInclude Include="..\..\..\Shared\Input\IFunctionMap.hpp" />
+    <ClInclude Include="..\..\..\Shared\Interface\InterfaceState.hpp" />
+    <ClInclude Include="..\..\..\Shared\Interface\InterfaceStateMachine.hpp" />
+    <ClInclude Include="..\..\..\Shared\Messages\Console\MessageDisplay.hpp" />
+    <ClInclude Include="..\..\..\Shared\Messages\UserMessageLog.hpp" />
+    <ClInclude Include="..\..\..\Shared\Messages\UserMessageWindow.hpp" />
+    <ClInclude Include="..\..\..\Shared\World-2DTiles\BSPMapGeneration\BSPMapMake.hpp" />
+    <ClInclude Include="..\..\..\Shared\World-2DTiles\BSPMapGeneration\BSPMapMakeWrapper.hpp" />
+    <ClInclude Include="..\..\..\Shared\World-2DTiles\HearingField.hpp" />
+    <ClInclude Include="..\..\..\Shared\World-2DTiles\permissive-fov\permissive-fov-cpp.h" />
+    <ClInclude Include="..\..\..\Shared\World-2DTiles\permissive-fov\permissive-fov.h" />
+    <ClInclude Include="..\..\..\Shared\World-2DTiles\VisionField.hpp" />
+    <ClInclude Include="..\..\..\Shared\World-2DTiles\World.hpp" />
+    <ClInclude Include="..\..\..\Shared\World-2DTiles\Zone.hpp" />
+    <ClInclude Include="..\..\..\Shared\WorldObjects\Actor.hpp" />
+    <ClInclude Include="..\..\..\Shared\WorldObjects\Types.hpp" />
+    <ClInclude Include="..\..\..\Shared\WorldObjects\WorldObject.hpp" />
+    <ClInclude Include="..\..\src\Console\Interface\BuyPerks.hpp" />
+    <ClInclude Include="..\..\src\Console\Interface\CharScreen.hpp" />
+    <ClInclude Include="..\..\src\Console\Interface\ChoiceDialog.hpp" />
+    <ClInclude Include="..\..\src\Console\Interface\draw.hpp" />
+    <ClInclude Include="..\..\src\Console\Interface\DropDialog.hpp" />
+    <ClInclude Include="..\..\src\Console\Interface\GameEvents.hpp" />
+    <ClInclude Include="..\..\src\Console\Interface\GameTypeMenu.hpp" />
+    <ClInclude Include="..\..\src\Console\Interface\GetDialog.hpp" />
+    <ClInclude Include="..\..\src\Console\Interface\GetWeaponDialog.hpp" />
+    <ClInclude Include="..\..\src\Console\Interface\HelpScreen.hpp" />
+    <ClInclude Include="..\..\src\Console\Interface\Kaboom.hpp" />
+    <ClInclude Include="..\..\src\Console\Interface\LoadOrNew.hpp" />
+    <ClInclude Include="..\..\src\Console\Interface\LookMode.hpp" />
+    <ClInclude Include="..\..\src\Console\Interface\MessageBox.hpp" />
+    <ClInclude Include="..\..\src\Console\Interface\NameEntry.hpp" />
+    <ClInclude Include="..\..\src\Console\Interface\PlayingGame.hpp" />
+    <ClInclude Include="..\..\src\Console\Interface\story.hpp" />
+    <ClInclude Include="..\..\src\Console\Interface\StoryText.hpp" />
+    <ClInclude Include="..\..\src\Console\Interface\TargetSelect.hpp" />
+    <ClInclude Include="..\..\src\Console\Interface\Title.hpp" />
+    <ClInclude Include="..\..\src\Console\Interface\ViewFile.hpp" />
+    <ClInclude Include="..\..\src\Console\version.hpp" />
+    <ClInclude Include="..\..\src\Model\Actions\BreakDoorAction.hpp" />
+    <ClInclude Include="..\..\src\Model\Actions\CloseDoorAction.hpp" />
+    <ClInclude Include="..\..\src\Model\Actions\DirectAttackAction.hpp" />
+    <ClInclude Include="..\..\src\Model\Actions\DiscreteMoveAction.hpp" />
+    <ClInclude Include="..\..\src\Model\Actions\DiscreteTurnAction.hpp" />
+    <ClInclude Include="..\..\src\Model\Actions\DropArmourAction.hpp" />
+    <ClInclude Include="..\..\src\Model\Actions\DropItemAction.hpp" />
+    <ClInclude Include="..\..\src\Model\Actions\DropWeaponAction.hpp" />
+    <ClInclude Include="..\..\src\Model\Actions\EnterExitVentAction.hpp" />
+    <ClInclude Include="..\..\src\Model\Actions\HasCompletionCallback.hpp" />
+    <ClInclude Include="..\..\src\Model\Actions\HuggerAttackAction.hpp" />
+    <ClInclude Include="..\..\src\Model\Actions\OpenDoorAction.hpp" />
+    <ClInclude Include="..\..\src\Model\Actions\PickupAction.hpp" />
+    <ClInclude Include="..\..\src\Model\Actions\PickupArmourAction.hpp" />
+    <ClInclude Include="..\..\src\Model\Actions\PickupWeaponAction.hpp" />
+    <ClInclude Include="..\..\src\Model\Actions\ReloadWeaponAction.hpp" />
+    <ClInclude Include="..\..\src\Model\Actions\SetChargeAction.hpp" />
+    <ClInclude Include="..\..\src\Model\Actions\SpitterAttackAction.hpp" />
+    <ClInclude Include="..\..\src\Model\Actions\SwitchWeaponAction.hpp" />
+    <ClInclude Include="..\..\src\Model\Actions\TakeAmmoAction.hpp" />
+    <ClInclude Include="..\..\src\Model\Actions\ThrowGrenadeAction.hpp" />
+    <ClInclude Include="..\..\src\Model\Actions\UseItemAction.hpp" />
+    <ClInclude Include="..\..\src\Model\Actions\UseTerminalAction.hpp" />
+    <ClInclude Include="..\..\src\Model\Actions\WaitAction.hpp" />
+    <ClInclude Include="..\..\src\Model\Actions\WeaponAttackAction.hpp" />
+    <ClInclude Include="..\..\src\Model\AHGameModel.hpp" />
+    <ClInclude Include="..\..\src\Model\FindNearest.hpp" />
+    <ClInclude Include="..\..\src\Model\IGameEvents.hpp" />
+    <ClInclude Include="..\..\src\Model\LoSSampler.hpp" />
+    <ClInclude Include="..\..\src\Model\MapCreator.hpp" />
+    <ClInclude Include="..\..\src\Model\Objects\AcidSplashable.hpp" />
+    <ClInclude Include="..\..\src\Model\Objects\AHGameObject.hpp" />
+    <ClInclude Include="..\..\src\Model\Objects\Alien.hpp" />
+    <ClInclude Include="..\..\src\Model\Objects\Armour.hpp" />
+    <ClInclude Include="..\..\src\Model\Objects\Barrel.hpp" />
+    <ClInclude Include="..\..\src\Model\Objects\Decoration.hpp" />
+    <ClInclude Include="..\..\src\Model\Objects\Egg.hpp" />
+    <ClInclude Include="..\..\src\Model\Objects\Explosion.hpp" />
+    <ClInclude Include="..\..\src\Model\Objects\Explosive.hpp" />
+    <ClInclude Include="..\..\src\Model\Objects\Fire.hpp" />
+    <ClInclude Include="..\..\src\Model\Objects\Furniture.hpp" />
+    <ClInclude Include="..\..\src\Model\Objects\LaserTrail.hpp" />
+    <ClInclude Include="..\..\src\Model\Objects\ObjectType.hpp" />
+    <ClInclude Include="..\..\src\Model\Objects\Pickup.hpp" />
+    <ClInclude Include="..\..\src\Model\Objects\Ping.hpp" />
+    <ClInclude Include="..\..\src\Model\Objects\PlayerCharacter.hpp" />
+    <ClInclude Include="..\..\src\Model\Objects\PlayerStats.hpp" />
+    <ClInclude Include="..\..\src\Model\Objects\Projectile.hpp" />
+    <ClInclude Include="..\..\src\Model\Objects\Terminal.hpp" />
+    <ClInclude Include="..\..\src\Model\Objects\TerrainType.hpp" />
+    <ClInclude Include="..\..\src\Model\Objects\Weapon.hpp" />
+    <ClInclude Include="..\..\src\Model\Objects\WeaponData.hpp" />
+    <ClInclude Include="..\..\src\Model\OverWorld.hpp" />
+    <ClInclude Include="..\..\src\Model\save.hpp" />
+    <ClInclude Include="..\..\src\Model\Serialization.hpp" />
+    <ClInclude Include="..\..\src\Model\version.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
