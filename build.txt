@@ -22,14 +22,14 @@ AlienHack needs static libs which are probably not built by default, so run "b2 
 
 3. Get the AlienHack source code
 
-You need the "AlienHack" repository and the "Shared" repository (TODO: link).
-Choose your development folder wherever you like and put those two repositories under that folder.
+You need the "AlienHack" repository (this one!) and the "RL-Shared" repository (https://github.com/SockPuppet8/RL-Shared).
+Choose your development folder wherever you like and put those two repositories under that folder. (If I've been sufficiently diligent about not using relative paths from one to the other, then you should be able to put "RL-Shared" wherever you like. Try it and see if it breaks!)
 The structure from your development folder should now match that given in "folders.txt".
 
 
 4. Set environment variables: 
 
-RLDEV_SHARED_PATH to point to the location of the folder "Shared"
+RLDEV_SHARED_PATH to point to the location of the RL-Shared repository
 RLDEV_BOOST_PATH to point to the location of the "boost" folder in the Boost folder tree
 RLDEV_BOOST_LIB_PATH to point to the location of the Boost .lib files (probably Stage/lib under the Boost root folder)
 
