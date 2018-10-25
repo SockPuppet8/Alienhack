@@ -13,6 +13,10 @@ ALIENHACK by Sock Puppet
 
 This is the source code for the Alienhack game. If you're here because you want to play it, just download the binary (go to the Releases page, the file you want is "Alienhack 0.9 beta.zip"), unzip it, and run "Alienhack.exe". At the moment, Windows is the only supported platform.
 
+Note that the game currently does not have any sound effects. So if you can't hear anything, it's not a bug. If the game can't make you jumpy by gameplay alone then it has failed.
+
+## Building the game
+
 See "build.txt" for instructions on how to build the game.
 
 Some of the source code - all the code which is not specific to Alienhack, and could be re-used in a different game - is in a separate repository called "RL-Shared". See "build.txt" for more details. 
