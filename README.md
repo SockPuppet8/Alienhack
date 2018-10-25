@@ -1,5 +1,4 @@
-FAO Windows 10 users
-====================
+## FAO Windows 10 users
 
 There is a problem whereby the application window doesn't resize itself correctly at startup. 
 
