@@ -15,13 +15,13 @@ This is the source code for the Alienhack game. If you're here because you want 
 
 See "build.txt" for instructions on how to build the game.
 
-Some of the source code - all the code which is not specific to Alienhack, and could be re-used in a different game - is in a separate repository called "Shared". See "build.txt" for more details. 
+Some of the source code - all the code which is not specific to Alienhack, and could be re-used in a different game - is in a separate repository called "RL-Shared". See "build.txt" for more details. 
 
 Instructions for the game itself are in "ah_readme.txt". Controls are configured in "keys.txt". Both of these files are intended to be shipped in the same folder as the executable, so if you make any changes to them, don't forget to copy them to the executable folder. 
 
 Currently, Windows is the only supported platform. Only the following files contain Windows-specific code: 
-* Shared/Include/assert.hpp in the "Shared" repository
-* Shared/Console/Console.cpp in the "Shared" repository
+* Include/assert.hpp in the "RL-Shared" repository
+* Console/Console.cpp in the "RL-Shared" repository
 
 ## License
 
