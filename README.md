@@ -11,7 +11,7 @@ You can work around it easily by right-clicking in the top left of the window, s
 ALIENHACK by Sock Puppet
 ========================
 
-This is the source code for the Alienhack game. If you're here because you want to play it, just download the binary (assuming that I have uploaded one yet!) and run "Alienhack.exe". At the moment, Windows is the only supported platform.
+This is the source code for the Alienhack game. If you're here because you want to play it, just download the binary (go to the Releases page, the file you want is "Alienhack 0.9 beta.zip"), unzip it, and run "Alienhack.exe". At the moment, Windows is the only supported platform.
 
 See "build.txt" for instructions on how to build the game.
 
