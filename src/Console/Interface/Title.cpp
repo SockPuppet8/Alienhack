@@ -242,17 +242,16 @@ void Title::draw( AOutputWindow& window, AGameModel& in_model ) const
 
 	console.draw(atx, aty, '@', Console::Green);
 
-	static const char * border0 = "..................";
+	static const char * border0 = "....................";
 	std::string version = " Version " + std::string(GAMEMODEL_VERSION_STR) + std::string(" ");
-	static const char * border1 = "..................";
-	console.drawText(atx+4, title_base+10, border1, floor_col);
-	console.drawText(atx+4, title_base+11, version.c_str(), Console::Green);
-	console.drawText(atx+4, title_base+12, border1, floor_col);
+	console.drawText(atx+2, title_base+10, border0, floor_col);
+	console.drawText(atx+2, title_base+11, version.c_str(), Console::Green);
+	console.drawText(atx+2, title_base+12, border0, floor_col);
 
 	static const char * press_enter = " Press Enter ";
-	static const char * border2     = ".............";
+	static const char * border1     = ".............";
 	console.drawText(atx+9, title_base+13, press_enter, Console::BrightYellow);
-	console.drawText(atx+9, title_base+14, border2    , floor_col);
+	console.drawText(atx+9, title_base+14, border1    , floor_col);
 }
 
 bool Title::drawsWholeWindow(void) const

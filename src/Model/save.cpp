@@ -34,15 +34,22 @@ bool isSaveFile(const char * filename)
 			std::getline(ifs, firstline);
 			if (0 == firstline.compare(0, 18, "AlienHack savefile")) {
 
-				int ver_maj, ver_min;
-				if (std::sscanf(firstline.c_str(), "AlienHack savefile %d %d", &ver_maj, &ver_min) != 2)
+				int ver_maj, ver_min, ver_incr;
+				if (std::sscanf(firstline.c_str(), "AlienHack savefile %d %d %d", &ver_maj, &ver_min, &ver_incr) != 3)
 					return false;
 
 				if (ver_maj < GAMEMODEL_SAVE_LAST_COMPATIBLE_MAJOR)
 					return false;
 
-				if (ver_maj == GAMEMODEL_SAVE_LAST_COMPATIBLE_MAJOR && ver_min < GAMEMODEL_SAVE_LAST_COMPATIBLE_MINOR)
-					return false;
+				if (ver_maj == GAMEMODEL_SAVE_LAST_COMPATIBLE_MAJOR)
+				{
+					if (ver_min < GAMEMODEL_SAVE_LAST_COMPATIBLE_MINOR)
+						return false;
+
+					if (ver_min == GAMEMODEL_SAVE_LAST_COMPATIBLE_MINOR)
+						if (ver_incr < GAMEMODEL_SAVE_LAST_COMPATIBLE_INCREMENTAL)
+							return false;
+				}
 
 				return true;
 			}
@@ -61,7 +68,8 @@ bool saveGame(AHGameModel& model, const char * filename)
 	{
 		ofs << "AlienHack savefile " << 
 			boost::lexical_cast<std::string>(GAMEMODEL_VERSION_MAJOR) << " " << 
-			boost::lexical_cast<std::string>(GAMEMODEL_VERSION_MINOR) << " ##\n";
+			boost::lexical_cast<std::string>(GAMEMODEL_VERSION_MINOR) << " " << 
+			boost::lexical_cast<std::string>(GAMEMODEL_VERSION_INCREMENTAL) << " ##\n";
 
 		boost::archive::text_oarchive oa(ofs);
 
