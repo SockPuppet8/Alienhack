@@ -13,7 +13,7 @@ ALIENHACK by Sock Puppet
 
 This is the source code for the Alienhack game. Alienhack is a "roguelike" game loosely based on "AliensRL". More information can be found in "ah-readme.txt", which can also be viewed in-game.
 
-If you're here because you want to play it, just download the binary (go to the Releases page at https://github.com/SockPuppet8/Alienhack/releases, the file you want is "Alienhack 0.9 beta.zip"), unzip it, and run "Alienhack.exe". At the moment, Windows is the only supported platform.
+If you're here because you want to play it, just download the binary (go to the Releases page at https://github.com/SockPuppet8/Alienhack/releases, the file you want is "Alienhack.0.9.1.beta.zip"), unzip it, and run "Alienhack.exe". At the moment, Windows is the only supported platform.
 
 Note that the game currently does not have any sound effects. So if you can't hear anything, it's not a bug. If the game can't make you jumpy by gameplay alone then it has failed.
 
